@@ -62,7 +62,7 @@ If a metric is too hard or needs an API we can’t get, we either omit it or **s
 
 ## Repo structure
 
-- `backend/` — API and assessment logic (owner-maintained)
+- **`backend/`** — FastAPI app, assessment API, and logic (owner-maintained). See `backend/README.md` for run instructions.
 - Frontend lives in a separate repo or is owned by partners.
 
 ## License
