@@ -4,6 +4,7 @@ Real data wired in where available (e.g. NASA POWER for solar); rest are stubs.
 """
 
 from app.integrations.nasa_power import get_solar_irradiance
+from app.services.lcoh import compute_lcoh_usd_per_kg
 from app.models.schemas import (
     AssessmentType,
     LocationInput,
@@ -52,9 +53,11 @@ def run_assessment(assessment_type: AssessmentType, location: LocationInput) -> 
 
 
 def _metric_for(metric_id: str, name: str, location: LocationInput) -> MetricResult:
-    """Return real data for solar_wind_data (NASA POWER); stub for everything else."""
+    """Return real data where we have it; stub otherwise."""
     if metric_id == "solar_wind_data":
         return _solar_wind_metric(name, location)
+    if metric_id == "lcoh_calculator":
+        return _lcoh_metric(name, location)
     return _stub_metric(metric_id, name)
 
 
@@ -76,6 +79,36 @@ def _solar_wind_metric(name: str, location: LocationInput) -> MetricResult:
         value=None,
         status="suggest_further_research",
         message="We couldn't load solar data for this location. Consider specialist or local data.",
+    )
+
+
+def _lcoh_metric(name: str, location: LocationInput) -> MetricResult:
+    """Cost to produce here: LCOH ($/kg H2) from NASA solar + simplified electrolyzer model."""
+    data = get_solar_irradiance(location.latitude, location.longitude)
+    if data is None:
+        return MetricResult(
+            id="lcoh_calculator",
+            name=name,
+            value=None,
+            status="suggest_further_research",
+            message="We need solar data for this site to estimate cost. Try again or use local data.",
+        )
+    avg_solar = data["avg_daily_solar_kwh_m2"]
+    lcoh = compute_lcoh_usd_per_kg(avg_solar)
+    if lcoh is None:
+        return MetricResult(
+            id="lcoh_calculator",
+            name=name,
+            value=None,
+            status="suggest_further_research",
+            message="Could not compute cost for this location.",
+        )
+    return MetricResult(
+        id="lcoh_calculator",
+        name=name,
+        value=lcoh,
+        status=None,
+        message=f"Estimated LCOH: ${lcoh}/kg H2 (based on NASA solar and typical 100 MW electrolyzer assumptions).",
     )
 
 
