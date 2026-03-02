@@ -5,6 +5,7 @@ Real data wired in where available (e.g. NASA POWER for solar); rest are stubs.
 
 from app.integrations.nasa_power import get_solar_irradiance
 from app.services.lcoh import compute_lcoh_usd_per_kg
+from app.services.grid_availability import get_grid_availability
 from app.services.subsidies import get_subsidies_for_state
 from app.utils.geocode import get_state_abbr
 from app.models.schemas import (
@@ -62,6 +63,8 @@ def _metric_for(metric_id: str, name: str, location: LocationInput) -> MetricRes
         return _lcoh_metric(name, location)
     if metric_id == "policy_subsidy_matcher":
         return _policy_subsidy_metric(name, location)
+    if metric_id == "grid_availability":
+        return _grid_availability_metric(name, location)
     return _stub_metric(metric_id, name)
 
 
@@ -113,6 +116,33 @@ def _lcoh_metric(name: str, location: LocationInput) -> MetricResult:
         value=lcoh,
         status=None,
         message=f"Estimated LCOH: ${lcoh}/kg H2 (based on NASA solar and typical 100 MW electrolyzer assumptions).",
+    )
+
+
+def _grid_availability_metric(name: str, location: LocationInput) -> MetricResult:
+    """Can we connect to the grid? Curated regional queue/ISO summary and score by state."""
+    state_abbr = get_state_abbr(location.latitude, location.longitude)
+    data = get_grid_availability(state_abbr)
+    if data is None or not data.get("summary"):
+        return MetricResult(
+            id="grid_availability",
+            name=name,
+            value=None,
+            status="suggest_further_research",
+            message="Grid connection timing varies by utility. Check your transmission operator and interconnection queue.",
+        )
+    summary = data["summary"]
+    score = data.get("availability_score")
+    wait = data.get("typical_wait_years")
+    value = float(score) if score is not None else None
+    if wait is not None and summary:
+        summary = f"Typical queue wait: ~{int(wait)} years. {summary}"
+    return MetricResult(
+        id="grid_availability",
+        name=name,
+        value=value,
+        status=None,
+        message=summary,
     )
 
 

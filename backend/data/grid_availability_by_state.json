@@ -1,0 +1,102 @@
+{
+  "default": {
+    "summary": "Grid connection timing varies by utility and ISO. Check local transmission operator and queue timelines.",
+    "availability_score": 3,
+    "typical_wait_years": null
+  },
+  "CA": {
+    "summary": "CAISO: High demand for interconnection; queue wait often 5–7+ years. Plan early and expect study cycles.",
+    "availability_score": 2,
+    "typical_wait_years": 6
+  },
+  "TX": {
+    "summary": "ERCOT: Large queue; wait times vary by zone (often 3–5 years). CREZ and Panhandle have renewable build-out.",
+    "availability_score": 3,
+    "typical_wait_years": 4
+  },
+  "NM": {
+    "summary": "PNM / SPP: Moderate queue; interconnection timelines typically 3–5 years. Growing solar and H2 interest.",
+    "availability_score": 3,
+    "typical_wait_years": 4
+  },
+  "AZ": {
+    "summary": "APS, TEP, others: Desert Southwest queue; expect 4–6 years. Strong solar overlap.",
+    "availability_score": 3,
+    "typical_wait_years": 5
+  },
+  "NV": {
+    "summary": "NV Energy: Queue and study process; typical timelines 4–6 years for new generation.",
+    "availability_score": 3,
+    "typical_wait_years": 5
+  },
+  "WA": {
+    "summary": "BPA / utilities: Pacific Northwest; hydro-dominated. New generation interconnection varies by utility.",
+    "availability_score": 3,
+    "typical_wait_years": null
+  },
+  "OR": {
+    "summary": "PGE, PacifiCorp: Queue timelines typically 4–6 years; high renewable interest.",
+    "availability_score": 3,
+    "typical_wait_years": 5
+  },
+  "WY": {
+    "summary": "SPP / PacifiCorp: Wind and transmission build-out; interconnection timelines vary (3–6 years).",
+    "availability_score": 3,
+    "typical_wait_years": 4
+  },
+  "UT": {
+    "summary": "PacifiCorp, Dominion: Moderate queue; expect 4–5 years for new projects.",
+    "availability_score": 3,
+    "typical_wait_years": 4
+  },
+  "CO": {
+    "summary": "Xcel, SPP, others: Active renewable queue; typical wait 4–6 years.",
+    "availability_score": 3,
+    "typical_wait_years": 5
+  },
+  "IA": {
+    "summary": "MISO: Major wind and renewable queue; interconnection often 4–6 years.",
+    "availability_score": 3,
+    "typical_wait_years": 5
+  },
+  "OK": {
+    "summary": "SPP: Significant wind and solar queue; timelines typically 3–5 years.",
+    "availability_score": 3,
+    "typical_wait_years": 4
+  },
+  "KS": {
+    "summary": "SPP: High renewable interest; queue wait often 4–5 years.",
+    "availability_score": 3,
+    "typical_wait_years": 4
+  },
+  "IL": {
+    "summary": "MISO/PJM: Dense transmission; queue timelines 5–7+ years in congested areas.",
+    "availability_score": 2,
+    "typical_wait_years": 6
+  },
+  "NY": {
+    "summary": "NYISO: Queue and upgrade requirements; expect 5–7 years for new generation.",
+    "availability_score": 2,
+    "typical_wait_years": 6
+  },
+  "PA": {
+    "summary": "PJM: Large interconnection queue; typical wait 5–7 years.",
+    "availability_score": 2,
+    "typical_wait_years": 6
+  },
+  "OH": {
+    "summary": "PJM: Congested zones; queue wait often 5–7 years.",
+    "availability_score": 2,
+    "typical_wait_years": 6
+  },
+  "FL": {
+    "summary": "FPL, Duke, others: Florida utilities; interconnection timelines vary (4–6 years).",
+    "availability_score": 3,
+    "typical_wait_years": 5
+  },
+  "LA": {
+    "summary": "Entergy, SPP: Gulf region; queue and study process typically 4–5 years.",
+    "availability_score": 3,
+    "typical_wait_years": 4
+  }
+}
