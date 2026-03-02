@@ -5,6 +5,8 @@ Real data wired in where available (e.g. NASA POWER for solar); rest are stubs.
 
 from app.integrations.nasa_power import get_solar_irradiance
 from app.services.lcoh import compute_lcoh_usd_per_kg
+from app.services.subsidies import get_subsidies_for_state
+from app.utils.geocode import get_state_abbr
 from app.models.schemas import (
     AssessmentType,
     LocationInput,
@@ -58,6 +60,8 @@ def _metric_for(metric_id: str, name: str, location: LocationInput) -> MetricRes
         return _solar_wind_metric(name, location)
     if metric_id == "lcoh_calculator":
         return _lcoh_metric(name, location)
+    if metric_id == "policy_subsidy_matcher":
+        return _policy_subsidy_metric(name, location)
     return _stub_metric(metric_id, name)
 
 
@@ -109,6 +113,31 @@ def _lcoh_metric(name: str, location: LocationInput) -> MetricResult:
         value=lcoh,
         status=None,
         message=f"Estimated LCOH: ${lcoh}/kg H2 (based on NASA solar and typical 100 MW electrolyzer assumptions).",
+    )
+
+
+def _policy_subsidy_metric(name: str, location: LocationInput) -> MetricResult:
+    """What support can we get? Match location to US federal and state H2 programs."""
+    state_abbr = get_state_abbr(location.latitude, location.longitude)
+    programs = get_subsidies_for_state(state_abbr)
+    if not programs:
+        return MetricResult(
+            id="policy_subsidy_matcher",
+            name=name,
+            value=0,
+            status="stub",
+            message="No programs in database for this location. Check IRA 45V and state incentives.",
+        )
+    names = [p.get("name", p.get("id", "")) for p in programs]
+    msg = f"{len(programs)} program(s) may apply: " + "; ".join(names[:5])
+    if len(names) > 5:
+        msg += f" (and {len(names) - 5} more)."
+    return MetricResult(
+        id="policy_subsidy_matcher",
+        name=name,
+        value=float(len(programs)),
+        status=None,
+        message=msg,
     )
 
 

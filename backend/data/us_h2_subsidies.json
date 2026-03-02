@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ira-45v",
+    "name": "IRA Section 45V – Clean Hydrogen Production Tax Credit",
+    "type": "federal",
+    "states": "all",
+    "summary": "Up to $3/kg H2 for clean hydrogen production; tiered by lifecycle emissions.",
+    "link": "https://www.irs.gov/credits-deductions/clean-hydrogen-production-credit"
+  },
+  {
+    "id": "ira-48e",
+    "name": "IRA Section 48E – Clean Electricity Investment Tax Credit",
+    "type": "federal",
+    "states": "all",
+    "summary": "Investment tax credit for clean energy facilities, including electrolyzers.",
+    "link": "https://www.energy.gov/gdo/48c-investment-tax-credit"
+  },
+  {
+    "id": "doe-h2-hubs",
+    "name": "DOE Regional Clean Hydrogen Hubs (H2Hubs)",
+    "type": "federal",
+    "states": "all",
+    "summary": "$7B for regional hubs; project-specific funding and offtake support.",
+    "link": "https://www.energy.gov/oced/regional-clean-hydrogen-hubs"
+  },
+  {
+    "id": "california-ab-2628",
+    "name": "California Low-Carbon Fuel Standard (LCFS) & H2 programs",
+    "type": "state",
+    "states": ["CA"],
+    "summary": "Credits for low-carbon fuels including hydrogen; state grants and incentives.",
+    "link": "https://ww2.arb.ca.gov/our-work/programs/low-carbon-fuel-standard"
+  },
+  {
+    "id": "texas-h2-incentives",
+    "name": "Texas Hydrogen incentives and regulatory support",
+    "type": "state",
+    "states": ["TX"],
+    "summary": "State support for hydrogen production and infrastructure development.",
+    "link": "https://gov.texas.gov/business/energy"
+  },
+  {
+    "id": "new-mexico-clean-energy",
+    "name": "New Mexico Clean Energy incentives",
+    "type": "state",
+    "states": ["NM"],
+    "summary": "State incentives for clean energy and hydrogen projects.",
+    "link": "https://www.emnrd.nm.gov/ecmd/"
+  }
+]
