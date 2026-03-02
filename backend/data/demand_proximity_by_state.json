@@ -1,0 +1,94 @@
+{
+  "default": {
+    "summary": "Hydrogen offtake demand varies by region. Check nearby refineries, ammonia/fertilizer plants, heavy industry, and DOE H2 hubs for potential buyers.",
+    "demand_score": 3
+  },
+  "CA": {
+    "summary": "Strong demand: refining, ports, heavy transport, and industry. State H2 goals and LCFS drive offtake. LA basin and Central Valley industrial clusters.",
+    "demand_score": 4
+  },
+  "TX": {
+    "summary": "Major demand hub: Gulf Coast refineries, petrochemicals, ammonia, and H2 pipelines. DOE H2Hub; strong industrial and export offtake potential.",
+    "demand_score": 5
+  },
+  "NM": {
+    "summary": "Growing H2 interest; DOE H2Hub and regional industry. Refining and industrial offtake developing.",
+    "demand_score": 4
+  },
+  "AZ": {
+    "summary": "Industrial and data center demand; heavy transport corridors. Regional offtake agreements emerging.",
+    "demand_score": 3
+  },
+  "NV": {
+    "summary": "Industrial and logistics demand; Las Vegas and Reno corridors. Offtake market developing.",
+    "demand_score": 3
+  },
+  "WA": {
+    "summary": "Refining (Puget Sound), aviation, and industry. Clean H2 offtake interest for maritime and heavy transport.",
+    "demand_score": 4
+  },
+  "OR": {
+    "summary": "Industrial and logistics; Portland corridor. Regional offtake and ammonia interest.",
+    "demand_score": 3
+  },
+  "WY": {
+    "summary": "Coal and industrial; ammonia and fertilizer potential. Smaller offtake market but growing.",
+    "demand_score": 3
+  },
+  "UT": {
+    "summary": "Refining and industry along Wasatch Front. Regional H2 and ammonia offtake interest.",
+    "demand_score": 4
+  },
+  "CO": {
+    "summary": "Front Range industry, refining, and transport. Growing clean H2 and ammonia offtake interest.",
+    "demand_score": 4
+  },
+  "IA": {
+    "summary": "Fertilizer and ag industry; ammonia demand. Central location for Midwest offtake.",
+    "demand_score": 4
+  },
+  "OK": {
+    "summary": "Refining and petrochemicals; Cushing and Gulf links. Strong industrial offtake potential.",
+    "demand_score": 4
+  },
+  "KS": {
+    "summary": "Ag and fertilizer; ammonia demand. Regional industrial offtake.",
+    "demand_score": 4
+  },
+  "IL": {
+    "summary": "Chicago industrial hub; refining, steel, and transport. Major Midwest offtake market.",
+    "demand_score": 5
+  },
+  "NY": {
+    "summary": "Industrial and transport demand; Northeast corridor. Clean H2 for heavy industry and ports.",
+    "demand_score": 4
+  },
+  "PA": {
+    "summary": "Manufacturing, refining, and industry. Ohio River and East Coast offtake potential.",
+    "demand_score": 4
+  },
+  "OH": {
+    "summary": "DOE H2Hub; manufacturing, refining, and steel. Strong industrial offtake and ammonia demand.",
+    "demand_score": 5
+  },
+  "FL": {
+    "summary": "Space coast, ports, and industry. Growing H2 for transport and industrial offtake.",
+    "demand_score": 4
+  },
+  "LA": {
+    "summary": "Major demand: Gulf refineries, petrochemicals, ammonia, and H2 pipelines. DOE H2Hub; dense offtake corridor.",
+    "demand_score": 5
+  },
+  "ND": {
+    "summary": "Fertilizer and ag; ammonia demand. Regional offtake and Midwest connections.",
+    "demand_score": 3
+  },
+  "NE": {
+    "summary": "Ag and fertilizer; ammonia offtake. Regional industrial demand.",
+    "demand_score": 4
+  },
+  "MT": {
+    "summary": "Refining and resource sector. Smaller offtake market; regional agreements.",
+    "demand_score": 3
+  }
+}

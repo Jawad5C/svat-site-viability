@@ -5,6 +5,7 @@ Real data wired in where available (e.g. NASA POWER for solar); rest are stubs.
 
 from app.integrations.nasa_power import get_solar_irradiance
 from app.services.lcoh import compute_lcoh_usd_per_kg
+from app.services.demand_proximity import get_demand_proximity
 from app.services.electricity_stability import get_electricity_stability
 from app.services.grid_availability import get_grid_availability
 from app.services.infrastructure import get_infrastructure_proximity
@@ -60,6 +61,8 @@ def run_assessment(assessment_type: AssessmentType, location: LocationInput) -> 
 
 def _metric_for(metric_id: str, name: str, location: LocationInput) -> MetricResult:
     """Return real data where we have it; stub otherwise."""
+    if metric_id == "demand_proximity":
+        return _demand_proximity_metric(name, location)
     if metric_id == "solar_wind_data":
         return _solar_wind_metric(name, location)
     if metric_id == "lcoh_calculator":
@@ -75,6 +78,30 @@ def _metric_for(metric_id: str, name: str, location: LocationInput) -> MetricRes
     if metric_id == "infrastructure_proximity":
         return _infrastructure_metric(name, location)
     return _stub_metric(metric_id, name)
+
+
+def _demand_proximity_metric(name: str, location: LocationInput) -> MetricResult:
+    """Buyers nearby? Curated offtake/demand summary and score by state (1–5, higher = stronger)."""
+    state_abbr = get_state_abbr(location.latitude, location.longitude)
+    data = get_demand_proximity(state_abbr)
+    if data is None or not data.get("summary"):
+        return MetricResult(
+            id="demand_proximity",
+            name=name,
+            value=None,
+            status="suggest_further_research",
+            message="Check nearby refineries, ammonia plants, and industrial offtake for this site.",
+        )
+    summary = data["summary"]
+    score = data.get("demand_score")
+    value = float(score) if score is not None else None
+    return MetricResult(
+        id="demand_proximity",
+        name=name,
+        value=value,
+        status=None,
+        message=summary,
+    )
 
 
 def _solar_wind_metric(name: str, location: LocationInput) -> MetricResult:
