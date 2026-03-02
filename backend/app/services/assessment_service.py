@@ -7,6 +7,7 @@ from app.integrations.nasa_power import get_solar_irradiance
 from app.services.lcoh import compute_lcoh_usd_per_kg
 from app.services.electricity_stability import get_electricity_stability
 from app.services.grid_availability import get_grid_availability
+from app.services.infrastructure import get_infrastructure_proximity
 from app.services.regional_risk import get_regional_risk
 from app.services.subsidies import get_subsidies_for_state
 from app.utils.geocode import get_state_abbr
@@ -71,6 +72,8 @@ def _metric_for(metric_id: str, name: str, location: LocationInput) -> MetricRes
         return _regional_risk_metric(name, location)
     if metric_id == "electricity_price_stability":
         return _electricity_stability_metric(name, location)
+    if metric_id == "infrastructure_proximity":
+        return _infrastructure_metric(name, location)
     return _stub_metric(metric_id, name)
 
 
@@ -218,6 +221,30 @@ def _electricity_stability_metric(name: str, location: LocationInput) -> MetricR
     value = float(score) if score is not None else None
     return MetricResult(
         id="electricity_price_stability",
+        name=name,
+        value=value,
+        status=None,
+        message=summary,
+    )
+
+
+def _infrastructure_metric(name: str, location: LocationInput) -> MetricResult:
+    """Ports, roads, pipelines: curated access summary and score by state (1–5, higher = better)."""
+    state_abbr = get_state_abbr(location.latitude, location.longitude)
+    data = get_infrastructure_proximity(state_abbr)
+    if data is None or not data.get("summary"):
+        return MetricResult(
+            id="infrastructure_proximity",
+            name=name,
+            value=None,
+            status="suggest_further_research",
+            message="Check distance to ports, pipelines, and major roads for this site.",
+        )
+    summary = data["summary"]
+    score = data.get("infrastructure_score")
+    value = float(score) if score is not None else None
+    return MetricResult(
+        id="infrastructure_proximity",
         name=name,
         value=value,
         status=None,

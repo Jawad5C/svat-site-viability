@@ -1,0 +1,94 @@
+{
+  "default": {
+    "summary": "Access to ports, pipelines, and major roads varies by site. Check distance to export corridors, industrial hubs, and hydrogen pipelines.",
+    "infrastructure_score": 3
+  },
+  "CA": {
+    "summary": "Major ports (LA/Long Beach, Oakland); rail and I-5/I-10 corridors. H2 pipeline build-out in planning. Industrial zones along coast and Central Valley.",
+    "infrastructure_score": 4
+  },
+  "TX": {
+    "summary": "Gulf Coast ports (Houston, Corpus Christi); dense pipeline and petrochemical corridor. Rail and highway network. Strong H2 and ammonia export potential.",
+    "infrastructure_score": 5
+  },
+  "NM": {
+    "summary": "Rail and I-25/I-40; proximity to Permian and Colorado hubs. Pipeline and export corridor development growing.",
+    "infrastructure_score": 4
+  },
+  "AZ": {
+    "summary": "I-10/I-8 corridors; rail to California and Mexico. Solar and industrial development along transport routes.",
+    "infrastructure_score": 4
+  },
+  "NV": {
+    "summary": "I-80 and rail corridors; connections to California and Utah. Industrial and logistics development.",
+    "infrastructure_score": 3
+  },
+  "WA": {
+    "summary": "Puget Sound ports; rail to Midwest. Industrial and clean-energy infrastructure along I-5 and Columbia.",
+    "infrastructure_score": 4
+  },
+  "OR": {
+    "summary": "Port of Portland; I-5 and rail. Columbia River industrial corridor.",
+    "infrastructure_score": 4
+  },
+  "WY": {
+    "summary": "Rail and I-80; wind and industrial corridors. Pipeline and export routes to regional hubs.",
+    "infrastructure_score": 3
+  },
+  "UT": {
+    "summary": "I-15/I-80; rail to West Coast and Denver. Industrial and refining corridor.",
+    "infrastructure_score": 4
+  },
+  "CO": {
+    "summary": "I-25/I-70; rail to Front Range and Plains. Growing H2 and industrial infrastructure.",
+    "infrastructure_score": 4
+  },
+  "IA": {
+    "summary": "Rail hub; major highways. Ag and industrial logistics; ammonia and H2 corridor interest.",
+    "infrastructure_score": 4
+  },
+  "OK": {
+    "summary": "Pipeline and rail network; I-35/I-40. Cushing and Gulf connections. Strong energy logistics.",
+    "infrastructure_score": 4
+  },
+  "KS": {
+    "summary": "Rail and I-70; pipeline corridors. Central location for ag and energy logistics.",
+    "infrastructure_score": 4
+  },
+  "IL": {
+    "summary": "Chicago rail hub; Great Lakes and Mississippi access. Dense transport and industrial infrastructure.",
+    "infrastructure_score": 5
+  },
+  "NY": {
+    "summary": "Port of NY/NJ; rail and I-90/I-87. Industrial corridors and Northeast logistics.",
+    "infrastructure_score": 4
+  },
+  "PA": {
+    "summary": "Rail and I-76/I-80; Ohio River and East Coast connections. Industrial and pipeline infrastructure.",
+    "infrastructure_score": 4
+  },
+  "OH": {
+    "summary": "Rail and highway hub; Great Lakes and Ohio River. Manufacturing and industrial logistics.",
+    "infrastructure_score": 5
+  },
+  "FL": {
+    "summary": "Gulf and Atlantic ports; I-95/I-75. Industrial and space coast logistics.",
+    "infrastructure_score": 4
+  },
+  "LA": {
+    "summary": "Gulf Coast ports (New Orleans, Baton Rouge); major pipeline and petrochemical corridor. Barge, rail, and highway access.",
+    "infrastructure_score": 5
+  },
+  "ND": {
+    "summary": "Rail and pipeline; wind and ag logistics. Connections to Midwest and Canada.",
+    "infrastructure_score": 3
+  },
+  "NE": {
+    "summary": "I-80 and rail; central corridor. Ag and industrial logistics.",
+    "infrastructure_score": 4
+  },
+  "MT": {
+    "summary": "Rail corridors; I-90/I-15. Resource and ag logistics; regional hub potential.",
+    "infrastructure_score": 3
+  }
+}
