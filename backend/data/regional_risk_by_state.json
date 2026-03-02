@@ -1,0 +1,98 @@
+{
+  "default": {
+    "summary": "Financing conditions vary by region. Consider local lenders, DOE loan programs, and project finance advisors.",
+    "risk_score": 3
+  },
+  "CA": {
+    "summary": "Strong clean-energy project finance market; state and federal support. Interest rates and terms vary with project structure.",
+    "risk_score": 4
+  },
+  "TX": {
+    "summary": "Active energy project finance; ERCOT and industrial offtake attract lenders. Commodity and regulatory factors can affect terms.",
+    "risk_score": 4
+  },
+  "NM": {
+    "summary": "Growing clean-energy focus; federal and state incentives improve bankability. Smaller market than CA/TX.",
+    "risk_score": 4
+  },
+  "AZ": {
+    "summary": "Solar and industrial project finance established; competitive with neighboring states for capital.",
+    "risk_score": 4
+  },
+  "NV": {
+    "summary": "Renewable and industrial projects financed; utility and offtake structure matter for terms.",
+    "risk_score": 4
+  },
+  "WA": {
+    "summary": "Clean energy and industrial lending present; hydropower and policy shape project economics.",
+    "risk_score": 4
+  },
+  "OR": {
+    "summary": "Renewable project finance available; policy and offtake drive bankability.",
+    "risk_score": 4
+  },
+  "WY": {
+    "summary": "Energy-state lending; wind and industrial projects. Smaller deal flow than major hubs.",
+    "risk_score": 3
+  },
+  "UT": {
+    "summary": "Industrial and renewable finance; moderate market size. Offtake clarity improves terms.",
+    "risk_score": 4
+  },
+  "CO": {
+    "summary": "Strong renewable and cleantech finance; competitive terms for well-structured projects.",
+    "risk_score": 4
+  },
+  "IA": {
+    "summary": "Wind and ag-industrial finance established; lenders familiar with renewable projects.",
+    "risk_score": 4
+  },
+  "OK": {
+    "summary": "Energy project finance; wind and oil/gas transition. Lender base used to energy projects.",
+    "risk_score": 4
+  },
+  "KS": {
+    "summary": "Wind and industrial lending; moderate market. Federal incentives improve viability.",
+    "risk_score": 4
+  },
+  "IL": {
+    "summary": "Large project finance market; nuclear, renewables, and industry. Competitive but complex.",
+    "risk_score": 4
+  },
+  "NY": {
+    "summary": "Strong clean-energy and infrastructure finance; policy and offtake support bankability.",
+    "risk_score": 4
+  },
+  "PA": {
+    "summary": "Industrial and energy project finance; PJM and offtake structure affect terms.",
+    "risk_score": 4
+  },
+  "OH": {
+    "summary": "Manufacturing and energy lending; hydrogen and industrial offtake gaining interest.",
+    "risk_score": 4
+  },
+  "FL": {
+    "summary": "Growing clean-energy finance; utilities and industrial offtake. Market developing.",
+    "risk_score": 4
+  },
+  "LA": {
+    "summary": "Industrial and energy project finance; Gulf coast and hydrogen hubs attract capital. Commodity exposure can affect terms.",
+    "risk_score": 4
+  },
+  "ND": {
+    "summary": "Wind and energy-state lending; smaller market. Federal programs help.",
+    "risk_score": 3
+  },
+  "SD": {
+    "summary": "Wind project finance; moderate lender interest. Structure and offtake matter.",
+    "risk_score": 3
+  },
+  "NE": {
+    "summary": "Ag and wind lending; hydrogen and ammonia interest growing.",
+    "risk_score": 4
+  },
+  "MT": {
+    "summary": "Energy and resource project finance; smaller deal flow. DOE and state programs relevant.",
+    "risk_score": 3
+  }
+}

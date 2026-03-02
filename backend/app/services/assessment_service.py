@@ -6,6 +6,7 @@ Real data wired in where available (e.g. NASA POWER for solar); rest are stubs.
 from app.integrations.nasa_power import get_solar_irradiance
 from app.services.lcoh import compute_lcoh_usd_per_kg
 from app.services.grid_availability import get_grid_availability
+from app.services.regional_risk import get_regional_risk
 from app.services.subsidies import get_subsidies_for_state
 from app.utils.geocode import get_state_abbr
 from app.models.schemas import (
@@ -65,6 +66,8 @@ def _metric_for(metric_id: str, name: str, location: LocationInput) -> MetricRes
         return _policy_subsidy_metric(name, location)
     if metric_id == "grid_availability":
         return _grid_availability_metric(name, location)
+    if metric_id == "regional_risk_score":
+        return _regional_risk_metric(name, location)
     return _stub_metric(metric_id, name)
 
 
@@ -168,6 +171,30 @@ def _policy_subsidy_metric(name: str, location: LocationInput) -> MetricResult:
         value=float(len(programs)),
         status=None,
         message=msg,
+    )
+
+
+def _regional_risk_metric(name: str, location: LocationInput) -> MetricResult:
+    """Financing risk in this region: curated summary and score by state (1–5, higher = better)."""
+    state_abbr = get_state_abbr(location.latitude, location.longitude)
+    data = get_regional_risk(state_abbr)
+    if data is None or not data.get("summary"):
+        return MetricResult(
+            id="regional_risk_score",
+            name=name,
+            value=None,
+            status="suggest_further_research",
+            message="Financing conditions vary by region. Consider local lenders and DOE loan programs.",
+        )
+    summary = data["summary"]
+    score = data.get("risk_score")
+    value = float(score) if score is not None else None
+    return MetricResult(
+        id="regional_risk_score",
+        name=name,
+        value=value,
+        status=None,
+        message=summary,
     )
 
 
