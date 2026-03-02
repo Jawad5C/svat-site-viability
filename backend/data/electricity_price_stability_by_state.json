@@ -1,0 +1,94 @@
+{
+  "default": {
+    "summary": "Electricity price volatility varies by market. Long-term PPAs and on-site renewables can reduce exposure. Check regional wholesale and utility rates.",
+    "stability_score": 3
+  },
+  "CA": {
+    "summary": "CAISO: Some price volatility; duck curve and renewables shift patterns. Long-term contracts and behind-the-meter solar help stabilize costs.",
+    "stability_score": 3
+  },
+  "TX": {
+    "summary": "ERCOT: Higher wholesale volatility; real-time and day-ahead swings. Secure long-term PPAs or hedge to manage price risk for H2 production.",
+    "stability_score": 2
+  },
+  "NM": {
+    "summary": "SPP/PNM: Moderate volatility. Solar resource supports PPA stability. Lock in terms where possible.",
+    "stability_score": 4
+  },
+  "AZ": {
+    "summary": "Desert Southwest: Strong solar reduces net exposure; utility and wholesale terms vary. PPAs common for large loads.",
+    "stability_score": 4
+  },
+  "NV": {
+    "summary": "NV Energy / WECC: Renewable growth and contracts can stabilize costs. Negotiate or procure long-term supply for H2.",
+    "stability_score": 4
+  },
+  "WA": {
+    "summary": "BPA and utilities: Hydro-dominated; generally more stable prices. Industrial rates and contracts vary.",
+    "stability_score": 4
+  },
+  "OR": {
+    "summary": "BPA, PGE, PacifiCorp: Mix of hydro and markets. Long-term industrial contracts improve predictability.",
+    "stability_score": 4
+  },
+  "WY": {
+    "summary": "SPP / PacifiCorp: Wind and coal mix; price stability moderate. Contract terms matter for large loads.",
+    "stability_score": 3
+  },
+  "UT": {
+    "summary": "PacifiCorp: Diverse resource mix; industrial rates and PPAs can provide stability.",
+    "stability_score": 4
+  },
+  "CO": {
+    "summary": "Xcel, SPP: Growing renewables; PPA market active. Lock in supply for predictable H2 economics.",
+    "stability_score": 4
+  },
+  "IA": {
+    "summary": "MISO: Wind-heavy; wholesale volatility exists. Long-term PPAs widely used for industrial offtake.",
+    "stability_score": 4
+  },
+  "OK": {
+    "summary": "SPP: Wind and gas; some volatility. Secure contracts for base-load H2 economics.",
+    "stability_score": 3
+  },
+  "KS": {
+    "summary": "SPP: Wind and thermal; moderate stability. PPAs and utility agreements help.",
+    "stability_score": 4
+  },
+  "IL": {
+    "summary": "MISO/PJM: Mixed markets; volatility by zone. Long-term contracts and renewables reduce risk.",
+    "stability_score": 3
+  },
+  "NY": {
+    "summary": "NYISO: Some volatility; policy and renewables shifting stack. Industrial and large-load contracts available.",
+    "stability_score": 3
+  },
+  "PA": {
+    "summary": "PJM: Wholesale volatility; capacity and energy markets. Hedge or contract for stable H2 input costs.",
+    "stability_score": 3
+  },
+  "OH": {
+    "summary": "PJM: Industrial rates and market exposure vary. Long-term supply agreements improve stability.",
+    "stability_score": 3
+  },
+  "FL": {
+    "summary": "FPL, Duke: Regulated utilities; relatively stable retail and industrial rates. Contract terms key.",
+    "stability_score": 4
+  },
+  "LA": {
+    "summary": "Entergy, SPP: Industrial corridor; some gas-driven volatility. Long-term agreements common for large users.",
+    "stability_score": 3
+  },
+  "ND": {
+    "summary": "MISO/SPP: Wind and coal; moderate price stability. Industrial offtake contracts available.",
+    "stability_score": 4
+  },
+  "NE": {
+    "summary": "SPP: Wind and thermal mix; PPA market supports stable pricing for large loads.",
+    "stability_score": 4
+  },
+  "MT": {
+    "summary": "NorthWestern, SPP: Hydro and wind; generally stable. Contract for firm supply where needed.",
+    "stability_score": 4
+  }
+}

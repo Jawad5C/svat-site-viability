@@ -5,6 +5,7 @@ Real data wired in where available (e.g. NASA POWER for solar); rest are stubs.
 
 from app.integrations.nasa_power import get_solar_irradiance
 from app.services.lcoh import compute_lcoh_usd_per_kg
+from app.services.electricity_stability import get_electricity_stability
 from app.services.grid_availability import get_grid_availability
 from app.services.regional_risk import get_regional_risk
 from app.services.subsidies import get_subsidies_for_state
@@ -68,6 +69,8 @@ def _metric_for(metric_id: str, name: str, location: LocationInput) -> MetricRes
         return _grid_availability_metric(name, location)
     if metric_id == "regional_risk_score":
         return _regional_risk_metric(name, location)
+    if metric_id == "electricity_price_stability":
+        return _electricity_stability_metric(name, location)
     return _stub_metric(metric_id, name)
 
 
@@ -191,6 +194,30 @@ def _regional_risk_metric(name: str, location: LocationInput) -> MetricResult:
     value = float(score) if score is not None else None
     return MetricResult(
         id="regional_risk_score",
+        name=name,
+        value=value,
+        status=None,
+        message=summary,
+    )
+
+
+def _electricity_stability_metric(name: str, location: LocationInput) -> MetricResult:
+    """Will electricity stay affordable? Curated price stability summary and score by state (1–5, higher = more stable)."""
+    state_abbr = get_state_abbr(location.latitude, location.longitude)
+    data = get_electricity_stability(state_abbr)
+    if data is None or not data.get("summary"):
+        return MetricResult(
+            id="electricity_price_stability",
+            name=name,
+            value=None,
+            status="suggest_further_research",
+            message="Electricity price volatility varies by market. Consider long-term PPAs and regional rate data.",
+        )
+    summary = data["summary"]
+    score = data.get("stability_score")
+    value = float(score) if score is not None else None
+    return MetricResult(
+        id="electricity_price_stability",
         name=name,
         value=value,
         status=None,
