@@ -1,0 +1,94 @@
+{
+  "default": {
+    "summary": "Electrolyzer and balance-of-plant supply chains are global; delivery and lead times vary. Proximity to ports and industrial hubs helps. Confirm supplier lead times for your timeline.",
+    "supply_chain_score": 3
+  },
+  "CA": {
+    "summary": "Major ports (LA/Long Beach) for equipment; strong industrial and tech base. Electrolyzer and BOP suppliers serve West Coast. Plan for lead times and logistics.",
+    "supply_chain_score": 4
+  },
+  "TX": {
+    "summary": "Gulf ports and industrial corridor; oil and gas supply chain overlaps with H2 equipment. Strong logistics and manufacturing base for project delivery.",
+    "supply_chain_score": 5
+  },
+  "NM": {
+    "summary": "Rail and I-25 to Denver and El Paso; proximity to solar and industrial hubs. Equipment typically via regional distributors or direct shipment.",
+    "supply_chain_score": 3
+  },
+  "AZ": {
+    "summary": "I-10 and rail to California and Mexico; solar and industrial logistics. Supplier access via West Coast and Southwest hubs.",
+    "supply_chain_score": 4
+  },
+  "NV": {
+    "summary": "I-80 and rail; connections to California and Salt Lake. Equipment delivery via West Coast ports and regional hubs.",
+    "supply_chain_score": 3
+  },
+  "WA": {
+    "summary": "Puget Sound ports; rail to Midwest. Industrial and clean-tech supply chain. Electrolyzer and BOP via West Coast.",
+    "supply_chain_score": 4
+  },
+  "OR": {
+    "summary": "Port of Portland; I-5 corridor. Equipment and components via West Coast logistics.",
+    "supply_chain_score": 4
+  },
+  "WY": {
+    "summary": "Rail and I-80; wind and industrial corridor. Delivery from Denver, SLC, or Gulf. Plan for lead times.",
+    "supply_chain_score": 3
+  },
+  "UT": {
+    "summary": "I-15/I-80; rail to West Coast and Denver. Regional hub for equipment and logistics.",
+    "supply_chain_score": 4
+  },
+  "CO": {
+    "summary": "Front Range logistics; rail and I-25. Growing H2 and renewable supply chain; supplier presence increasing.",
+    "supply_chain_score": 4
+  },
+  "IA": {
+    "summary": "Rail hub; central location. Wind and ag equipment supply chain; electrolyzer delivery from Gulf or Midwest.",
+    "supply_chain_score": 4
+  },
+  "OK": {
+    "summary": "Pipeline and rail; Cushing and Gulf links. Energy equipment and logistics established.",
+    "supply_chain_score": 4
+  },
+  "KS": {
+    "summary": "I-70 and rail; central corridor. Equipment via Kansas City and Gulf. Confirm lead times.",
+    "supply_chain_score": 4
+  },
+  "IL": {
+    "summary": "Chicago rail and logistics hub; Great Lakes ports. Major equipment and manufacturing supply chain. Strong delivery options.",
+    "supply_chain_score": 5
+  },
+  "NY": {
+    "summary": "Port of NY/NJ; Northeast corridor. Industrial and clean-energy supply chain. Equipment via East Coast ports.",
+    "supply_chain_score": 4
+  },
+  "PA": {
+    "summary": "Ohio River and East Coast access; rail and highway. Manufacturing and energy equipment logistics.",
+    "supply_chain_score": 4
+  },
+  "OH": {
+    "summary": "DOE H2Hub; manufacturing and logistics hub. Strong electrolyzer and BOP supplier access. Cleveland and Cincinnati corridors.",
+    "supply_chain_score": 5
+  },
+  "FL": {
+    "summary": "Gulf and Atlantic ports; space coast and industrial logistics. Equipment via Gulf and East Coast.",
+    "supply_chain_score": 4
+  },
+  "LA": {
+    "summary": "Gulf ports and petrochemical corridor; major equipment and fabrication base. Strong supply chain for H2 and industrial projects.",
+    "supply_chain_score": 5
+  },
+  "ND": {
+    "summary": "Rail to Midwest and Canada; wind supply chain. Equipment delivery from regional hubs; plan for lead times.",
+    "supply_chain_score": 3
+  },
+  "NE": {
+    "summary": "I-80 and rail; central location. Ag and energy equipment logistics. Delivery from Gulf or Midwest.",
+    "supply_chain_score": 4
+  },
+  "MT": {
+    "summary": "Rail corridors; regional logistics. Equipment typically via Denver, SLC, or Pacific Northwest. Confirm lead times.",
+    "supply_chain_score": 3
+  }
+}

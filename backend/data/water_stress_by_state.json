@@ -1,0 +1,94 @@
+{
+  "default": {
+    "summary": "Water availability and cost vary by basin and utility. We recommend WRI Aqueduct Water Risk Atlas and local utility data for site-level assessment.",
+    "water_availability_score": 3
+  },
+  "CA": {
+    "summary": "Variable by region; drought and allocation history. Municipal and industrial supply and cost vary. Check basin and utility; consider reclaimed water for electrolysis.",
+    "water_availability_score": 2
+  },
+  "TX": {
+    "summary": "Gulf and inland basins; industrial water use established. Availability and cost vary by region. Confirm supply and permits for large withdrawals.",
+    "water_availability_score": 3
+  },
+  "NM": {
+    "summary": "Arid; water rights and basin allocation critical. Secure supply and permits early. Reuse and alternative sources may be relevant.",
+    "water_availability_score": 2
+  },
+  "AZ": {
+    "summary": "Water-stressed; Colorado River and groundwater. Industrial users face allocation and cost pressure. Verify supply and long-term rights.",
+    "water_availability_score": 2
+  },
+  "NV": {
+    "summary": "Limited water; allocation tightly managed. Industrial supply and cost vary. Confirm availability and permits for project scale.",
+    "water_availability_score": 2
+  },
+  "WA": {
+    "summary": "Generally adequate supply in many basins; permits and rights still required. Regional variation; check local water rights.",
+    "water_availability_score": 4
+  },
+  "OR": {
+    "summary": "Variable by basin; western Oregon typically more available. Verify rights and cost for industrial use.",
+    "water_availability_score": 4
+  },
+  "WY": {
+    "summary": "Headwaters state; some basins under pressure. Water rights and allocation rules apply. Confirm supply for project.",
+    "water_availability_score": 3
+  },
+  "UT": {
+    "summary": "Great Salt Lake and Colorado River concerns; allocation varies. Secure water rights and assess long-term availability.",
+    "water_availability_score": 2
+  },
+  "CO": {
+    "summary": "Prior appropriation; competition in Front Range and Western Slope. Industrial water and reuse options; verify supply.",
+    "water_availability_score": 3
+  },
+  "IA": {
+    "summary": "Generally adequate surface and groundwater in many areas. Permits and allocation apply. Confirm for large withdrawals.",
+    "water_availability_score": 4
+  },
+  "OK": {
+    "summary": "Variable by region; some groundwater and surface supply. Check basin and permit requirements for industrial use.",
+    "water_availability_score": 3
+  },
+  "KS": {
+    "summary": "Ogallala and surface water; allocation and decline in some areas. Verify availability and cost for project scale.",
+    "water_availability_score": 3
+  },
+  "IL": {
+    "summary": "Great Lakes and Mississippi; generally adequate in many areas. Permits and withdrawals rules apply.",
+    "water_availability_score": 4
+  },
+  "NY": {
+    "summary": "Generally adequate in many regions; permits and watershed rules apply. Confirm for industrial scale.",
+    "water_availability_score": 4
+  },
+  "PA": {
+    "summary": "Ohio River and watersheds; supply typically adequate. Permits and withdrawal limits apply.",
+    "water_availability_score": 4
+  },
+  "OH": {
+    "summary": "Lake Erie and Ohio River; industrial water use established. Verify permits and supply for scale.",
+    "water_availability_score": 4
+  },
+  "FL": {
+    "summary": "Aquifer and surface water; allocation and quality vary. Confirm supply and permits for industrial use.",
+    "water_availability_score": 3
+  },
+  "LA": {
+    "summary": "Mississippi and Gulf; industrial water use common. Supply generally available; permits and discharge rules apply.",
+    "water_availability_score": 4
+  },
+  "ND": {
+    "summary": "Missouri River and groundwater; generally adequate in many areas. Confirm for large withdrawals.",
+    "water_availability_score": 4
+  },
+  "NE": {
+    "summary": "Platte and Ogallala; allocation varies. Verify supply and rights for project scale.",
+    "water_availability_score": 3
+  },
+  "MT": {
+    "summary": "Headwaters and basins; rights and allocation apply. Generally more available in some regions; verify locally.",
+    "water_availability_score": 4
+  }
+}
